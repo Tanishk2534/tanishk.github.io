@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanishk Gupta — CSE Student & Data Science Enthusiast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Tanishk<span class="dot">.</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="resume.pdf" download class="btn-resume">Resume <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-text" data-animate>
+        <div class="hero-tag">Available for Opportunities</div>
+        <h1 class="hero-name">Tanishk<br /><span>Gupta</span></h1>
+        <p class="hero-title">CSE Student &nbsp;·&nbsp; Data Science Enthusiast</p>
+        <p class="hero-bio">Computer Science student passionate about Data Science, Technology, and Software Development — focused on building intelligent, scalable, and data-driven solutions that turn complex data into actionable insights.</p>
+        <div class="hero-cta">
+          <a href="resume.pdf" download class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+          </a>
+          <a href="#projects" class="btn-outline">View Projects <span>↓</span></a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/Tanishk2534" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/2534-tanishk-gupta/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:tanishkgupta2534@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo" data-animate data-delay="200">
+        <div class="photo-ring"></div>
+        <div class="photo-frame">
+          <div class="photo-frame">
+            <img src="C:\Users\tanis\OneDrive\Desktop\photo.jpeg" alt="Tanishk Gupta" style="width:100%;height:100%;object-fit:cover ;" />
+          </div>
+        </div>
+        <div class="photo-badge">
+          <span>3rd Year</span>
+          <strong>LPU</strong>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label" data-animate>About Me</div>
+      <h2 class="section-title" data-animate>A little bit <em>about</em> me</h2>
+      <div class="about-grid">
+        <div class="about-text" data-animate>
+          <p>I am a third-year B.Tech Computer Science student at Lovely Professional University with a strong interest in Data Science, Machine Learning, and Software Development, aiming to develop data-driven and scalable software solutions.</p>
+          <p>I enjoy analyzing data, building predictive models, and developing solutions that solve real-world problems. I am continuously improving my technical skills through projects, certifications, and hands-on learning.</p>
+          <div class="about-goal">
+            <div class="goal-icon">🎯</div>
+            <div>
+              <strong>Career Goal</strong>
+              <p>Aspiring Data Scientist with a strong focus on Machine Learning, Data Analytics, Intelligent Systems, and Software Development — driven to create impactful, scalable, and data-driven solutions.</p>
+            </div>
+          </div>
+          <div class="about-hobbies">
+            <span>🏅 Sports</span>
+            <span>🎬 Cinema</span>
+            <span>🎮 Gaming</span>
+            <span>📚 Reading</span>
+          </div>
+        </div>
+        <div class="about-cards" data-animate data-delay="150">
+          <div class="info-card">
+            <div class="info-icon">🎓</div>
+            <div>
+              <strong>Lovely Professional University</strong>
+              <span>B.Tech — Computer Science & Engineering</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📅</div>
+            <div>
+              <strong>3rd Year</strong>
+              <span>Since August 2023</span>
+            </div>
+          </div>
+          <div class="info-card highlight-card">
+            <div class="info-icon">⭐</div>
+            <div>
+              <strong>CGPA: 6.73</strong>
+              <span>Continuously improving</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div>
+              <strong>Punjab, India</strong>
+              <span>Open to Remote / Relocation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SKILLS ═══════════════════════ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label" data-animate>What I Know</div>
+      <h2 class="section-title" data-animate>Skills &amp; <em>Technologies</em></h2>
+      <div class="skills-grid">
+        <div class="skill-group" data-animate>
+          <h3 class="skill-group-title"><span class="skill-group-icon">⌨️</span> Programming Languages</h3>
+          <div class="skill-badges">
+            <span class="badge badge-java">Java</span>
+            <span class="badge badge-cpp">C++</span>
+            <span class="badge badge-python">Python</span>
+            <span class="badge badge-c">C</span>
+          </div>
+        </div>
+        <div class="skill-group" data-animate data-delay="100">
+          <h3 class="skill-group-title"><span class="skill-group-icon">🛠️</span> Tools &amp; Platforms</h3>
+          <div class="skill-badges">
+            <span class="badge badge-git">Git</span>
+            <span class="badge badge-github">GitHub</span>
+            <span class="badge badge-vscode">VS Code</span>
+            <span class="badge badge-powerbi">Power BI</span>
+            <span class="badge badge-android">Android Studio</span>
+            <span class="badge badge-office">MS Office</span>
+          </div>
+        </div>
+        <div class="skill-group" data-animate data-delay="200">
+          <h3 class="skill-group-title"><span class="skill-group-icon">💡</span> Soft Skills</h3>
+          <div class="skill-badges">
+            <span class="badge badge-soft">Problem Solving</span>
+            <span class="badge badge-soft">Team Leadership</span>
+            <span class="badge badge-soft">Teamwork</span>
+            <span class="badge badge-soft">Adaptability</span>
+            <span class="badge badge-soft">Communication</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ PROJECTS ═══════════════════════ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-label" data-animate>What I've Built</div>
+      <h2 class="section-title" data-animate>Featured <em>Projects</em></h2>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card" data-animate>
+          <div class="project-img">
+            <div class="project-img-placeholder">
+              <svg viewBox="0 0 60 40" fill="none"><rect x="8" y="6" width="44" height="28" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M16 18h28M16 24h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="20" y="10" width="20" height="4" rx="1" fill="currentColor" opacity=".2"/></svg>
+            </div>
+            <div class="project-duration">Jun – Jul 2025</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Intelligent Clipboard Manager</h3>
+            <p class="project-desc">A desktop clipboard manager built in Java to store, search, and categorize clipboard history — boosting productivity and content accessibility.</p>
+            <ul class="project-highlights">
+              <li>Clipboard history tracking via Java AWT</li>
+              <li>Swing-based GUI for seamless interaction</li>
+              <li>Search, categorization &amp; text transformations</li>
+            </ul>
+            <div class="project-stack">
+              <span>Java</span><span>AWT</span><span>Swing</span><span>OOP</span><span>Event Handling</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Tanishk2534" target="_blank" class="proj-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <span class="proj-demo-placeholder">Live Demo (soon)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-animate data-delay="100">
+          <div class="project-img">
+            <div class="project-img-placeholder">
+              <svg viewBox="0 0 60 40" fill="none"><rect x="6" y="8" width="30" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M36 18h8l4 4-4 4h-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="18" r="4" fill="currentColor" opacity=".15"/><path d="M13 18h2M23 18h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </div>
+            <div class="project-duration">Mar – Apr 2025</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Startup Advisor Chatbot</h3>
+            <p class="project-desc">An interactive chatbot built with Botpress to guide founders through ideation, validation, funding basics, and growth strategies via conversational flows.</p>
+            <ul class="project-highlights">
+              <li>Structured conversational flows for startup guidance</li>
+              <li>Knowledge base for contextual responses</li>
+              <li>Topics: ideation, funding, business strategy</li>
+            </ul>
+            <div class="project-stack">
+              <span>Botpress</span><span>NLP</span><span>Conversational Design</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Tanishk2534" target="_blank" class="proj-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <span class="proj-demo-placeholder">Live Demo (soon)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-animate data-delay="200">
+          <div class="project-img">
+            <div class="project-img-placeholder">
+              <svg viewBox="0 0 60 40" fill="none"><polyline points="8,30 18,18 26,24 36,10 52,20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="8" y="8" width="8" height="12" rx="1" fill="currentColor" opacity=".15"/><rect x="20" y="14" width="8" height="6" rx="1" fill="currentColor" opacity=".2"/><rect x="32" y="10" width="8" height="10" rx="1" fill="currentColor" opacity=".25"/></svg>
+            </div>
+            <div class="project-duration">Mar – Apr 2025</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Video Game Sales Analysis</h3>
+            <p class="project-desc">Exploratory data analysis on video game sales data to identify trends across regions, genres, and platforms — surfacing consumer insights and market dynamics.</p>
+            <ul class="project-highlights">
+              <li>Data cleaning &amp; preprocessing with Python</li>
+              <li>Sales trend analysis across regions &amp; platforms</li>
+              <li>Rich visualizations for insights &amp; comparisons</li>
+            </ul>
+            <div class="project-stack">
+              <span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Tanishk2534" target="_blank" class="proj-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <span class="proj-demo-placeholder">Live Demo (soon)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ EXPERIENCE ═══════════════════════ -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-label" data-animate>Training</div>
+      <h2 class="section-title" data-animate>Experience &amp; <em>Training</em></h2>
+      <div class="timeline" data-animate>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Placement Ace: Java Bootcamp</h3>
+                <span class="timeline-org">Centre for Professional Enhancement — LPU</span>
+              </div>
+              <div class="timeline-date">Jun – Jul 2025</div>
+            </div>
+            <p class="timeline-desc">LeetCode–Codeforces Edition. Intensive DSA training using Java, solving competitive programming problems and sharpening problem-solving fundamentals.</p>
+            <ul class="timeline-bullets">
+              <li>Practiced Data Structures &amp; Algorithms using Java</li>
+              <li>Solved problems on LeetCode &amp; Codeforces</li>
+              <li>Improved coding efficiency through regular practice</li>
+              <li>Achieved <strong>Grade A</strong> in the program</li>
+            </ul>
+            <span class="timeline-badge">Grade A</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ EDUCATION ═══════════════════════ -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-label" data-animate>Academic Background</div>
+      <h2 class="section-title" data-animate>Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card edu-card--primary" data-animate>
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <h3>Lovely Professional University</h3>
+            <p class="edu-degree">B.Tech — Computer Science &amp; Engineering</p>
+            <div class="edu-meta">
+              <span class="edu-year">Since Aug 2023</span>
+              <span class="edu-grade">CGPA: 6.73</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-card" data-animate data-delay="100">
+          <div class="edu-icon">📚</div>
+          <div class="edu-body">
+            <h3>Vikas Bharti School</h3>
+            <p class="edu-degree">Intermediate (Class XII)</p>
+            <div class="edu-meta">
+              <span class="edu-year">2020 – 2022</span>
+              <span class="edu-grade">83.6%</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-card" data-animate data-delay="200">
+          <div class="edu-icon">🏫</div>
+          <div class="edu-body">
+            <h3>Little Flower School</h3>
+            <p class="edu-degree">Matriculation (Class X)</p>
+            <div class="edu-meta">
+              <span class="edu-year">2019 – 2020</span>
+              <span class="edu-grade">83.3%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CERTIFICATIONS ═══════════════════════ -->
+  <section class="section certifications" id="certifications">
+    <div class="container">
+      <div class="section-label" data-animate>Credentials</div>
+      <h2 class="section-title" data-animate>Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card" data-animate>
+          <div class="cert-issuer">NPTEL</div>
+          <h3 class="cert-name">Ethical Hacking</h3>
+          <span class="cert-date">October 2025</span>
+        </div>
+        <div class="cert-card" data-animate data-delay="80">
+          <div class="cert-issuer">Coursera</div>
+          <h3 class="cert-name">Computer Communications</h3>
+          <span class="cert-date">August 2024</span>
+        </div>
+        <div class="cert-card" data-animate data-delay="160">
+          <div class="cert-issuer">Udemy</div>
+          <h3 class="cert-name">Branding &amp; Brand Management with Decker</h3>
+          <span class="cert-date">November 2023</span>
+        </div>
+        <div class="cert-card" data-animate data-delay="240">
+          <div class="cert-issuer">Udemy</div>
+          <h3 class="cert-name">Email Marketing: Cold Email Marketing &amp; More</h3>
+          <span class="cert-date">November 2023</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ACHIEVEMENTS ═══════════════════════ -->
+  <section class="section achievements" id="achievements">
+    <div class="container">
+      <div class="section-label" data-animate>Wins</div>
+      <h2 class="section-title" data-animate>Achievements</h2>
+      <div class="achieve-grid">
+        <div class="achieve-card" data-animate>
+          <div class="achieve-icon">🏆</div>
+          <div>
+            <h3>Code-A-Haunt Hackathon</h3>
+            <span class="achieve-date">March 2024</span>
+            <p>Developed a working prototype within 24 hours and presented a solution to real-world problems in a competitive hackathon environment.</p>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ OPEN SOURCE / GITHUB ═══════════════════════ -->
+  <section class="section opensource" id="opensource">
+    <div class="container">
+      <div class="section-label" data-animate>Open Source</div>
+      <h2 class="section-title" data-animate>GitHub <em>Activity</em></h2>
+      <div class="github-card" data-animate>
+        <div class="github-top">
+          <div class="github-avatar">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </div>
+          <div>
+            <h3>Tanishk2534</h3>
+            <a href="https://github.com/Tanishk2534" target="_blank" rel="noopener">github.com/Tanishk2534</a>
+          </div>
+        </div>
+        <div class="github-stats">
+          <div class="gh-stat">
+            <strong id="repo-count">—</strong>
+            <span>Repositories</span>
+          </div>
+          <div class="gh-stat">
+            <strong>⭐</strong>
+            <span>Stars</span>
+          </div>
+          <div class="gh-stat">
+            <strong>🔀</strong>
+            <span>Contributions</span>
+          </div>
+        </div>
+        <a href="https://github.com/Tanishk2534" target="_blank" rel="noopener" class="btn-primary gh-cta">View GitHub Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label" data-animate>Get In Touch</div>
+      <h2 class="section-title" data-animate>Let's <em>Connect</em></h2>
+      <div class="contact-grid">
+        <div class="contact-info" data-animate>
+          <p class="contact-intro">I'm open to internships, collaborations, and new opportunities. Feel free to reach out!</p>
+          <div class="contact-items">
+            <a href="mailto:tanishkgupta2534@gmail.com" class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <span>tanishkgupta2534@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/2534-tanishk-gupta/" target="_blank" class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>2534-tanishk-gupta</span>
+              </div>
+            </a>
+            <a href="https://github.com/Tanishk2534" target="_blank" class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div>
+                <strong>GitHub</strong>
+                <span>Tanishk2534</span>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Location</strong>
+                <span>Punjab, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" data-animate data-delay="150">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit">
+            Send Message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">✅ Message sent! I'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="nav-logo">Tanishk<span class="dot">.</span></span>
+          <p>Tanishk Gupta — CSE Student &amp; Data Science Enthusiast</p>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/Tanishk2534" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/2534-tanishk-gupta/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:tanishkgupta2534@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Tanishk Gupta. Deployed on GitHub Pages.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
