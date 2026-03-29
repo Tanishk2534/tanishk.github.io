@@ -1,0 +1,872 @@
+<!DOCYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartupAdvice Hub | Expert Guidance for Entrepreneurs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4a6bff;
+            --secondary: #ff6b6b;
+            --dark: #2d3748;
+            --light: #f8f9fa;
+            --success: #48bb78;
+            --warning: #f6ad55;
+            --gray: #718096;
+            --light-gray: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7ff;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .cta-button {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #3a56d4;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7ff 0%, #e8ecff 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: 1px solid var(--light-gray);
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .search-bar button:hover {
+            background-color: #3a56d4;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(74, 107, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 24px;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: var(--gray);
+        }
+
+        /* Advice Section */
+        .advice-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .advice-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .tab-button.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .tab-button:hover:not(.active) {
+            color: var(--dark);
+        }
+
+        .advice-content {
+            display: none;
+        }
+
+        .advice-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .advice-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .advice-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .advice-card p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .advice-meta {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .advice-meta span {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .advice-meta i {
+            margin-right: 5px;
+        }
+
+        /* Expert Section */
+        .experts {
+            padding: 80px 0;
+            background-color: #f5f7ff;
+        }
+
+        .expert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .expert-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .expert-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .expert-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .expert-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .expert-card:hover .expert-image img {
+            transform: scale(1.1);
+        }
+
+        .expert-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .expert-info h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .expert-info p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .expert-specialty {
+            display: inline-block;
+            background-color: rgba(74, 107, 255, 0.1);
+            color: var(--primary);
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            padding: 60px 0;
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+        }
+
+        .newsletter-form button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0 25px;
+            border-radius: 0 5px 5px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #e05555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a0aec0;
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+                border-radius: 5px;
+            }
+
+            .newsletter-form button {
+                margin-top: 10px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/04/06/13/20250406132431-97CD32RI.js"></script>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>StartupAdvice</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Advice</a></li>
+                    <li><a href="#">Experts</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#" class="cta-button">Get Advice</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Launch & Grow Your Startup</h1>
+            <p>Get expert advice from successful entrepreneurs and industry leaders to help you navigate the startup journey.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for advice (e.g., funding, marketing, legal...)">
+                <button><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>How We Can Help</h2>
+                <p>Access curated startup knowledge from experienced founders and industry experts</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Growth Strategies</h3>
+                    <p>Learn proven tactics to scale your startup efficiently and avoid common growth pitfalls.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Funding Guidance</h3>
+                    <p>Navigate the complex world of startup funding with advice from investors and funded founders.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Team Building</h3>
+                    <p>Get insights on hiring, culture, and building a team that can execute your vision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Product Development</h3>
+                    <p>Expert advice on building products users love while maintaining technical excellence.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing & Sales</h3>
+                    <p>Effective strategies to acquire customers and build a sustainable revenue engine.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Legal & Compliance</h3>
+                    <p>Navigate legal complexities with advice from startup lawyers and experienced founders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advice Section -->
+    <section class="advice-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popular Advice</h2>
+                <p>Browse our most sought-after startup guidance</p>
+            </div>
+            <div class="advice-tabs">
+                <button class="tab-button active" data-tab="funding">Funding</button>
+                <button class="tab-button" data-tab="product">Product</button>
+                <button class="tab-button" data-tab="marketing">Marketing</button>
+                <button class="tab-button" data-tab="leadership">Leadership</button>
+                <button class="tab-button" data-tab="operations">Operations</button>
+            </div>
+            <div class="advice-content active" id="funding-tab">
+                <div class="advice-card">
+                    <h3>How to Structure Your Seed Round for Future Success</h3>
+                    <p>Learn the key considerations when setting up your initial funding round to avoid complications during later-stage investments. Includes cap table management, investor rights, and valuation strategies.</p>
+                    <div class="advice-meta">
+                        <span><i class="far fa-user"></i> Sarah Johnson, VC Partner</span>
+                        <span><i class="far fa-clock"></i> 15 min read</span>
+                        <span><i class="far fa-thumbs-up"></i> 84% found helpful</span>
+                    </div>
+                </div>
+                <div class="advice-card">
+                    <h3>Alternative Funding Options Beyond Venture Capital</h3>
+                    <p>Explore bootstrapping, revenue-based financing, grants, and other non-dilutive funding options that might be better suited for your business model and growth trajectory.</p>
+                    <div class="advice-meta">
+                        <span><i class="far fa-user"></i> Michael Chen, Serial Entrepreneur</span>
+                        <span><i class="far fa-clock"></i> 12 min read</span>
+                        <span><i class="far fa-thumbs-up"></i> 91% found helpful</span>
+                    </div>
+                </div>
+            </div>
+            <div class="advice-content" id="product-tab">
+                <div class="advice-card">
+                    <h3>Building an MVP That Actually Validates Your Idea</h3>
+                    <p>A step-by-step guide to creating a minimum viable product that truly tests your business assumptions without over-engineering. Learn what metrics to track and when to pivot.</p>
+                    <div class="advice-meta">
+                        <span><i class="far fa-user"></i> David Park, Product Lead</span>
+                        <span><i class="far fa-clock"></i> 18 min read</span>
+                        <span><i class="far fa-thumbs-up"></i> 89% found helpful</span>
+                    </div>
+                </div>
+            </div>
+            <div class="advice-content" id="marketing-tab">
+                <div class="advice-card">
+                    <h3>Growth Hacking on a Bootstrap Budget</h3>
+                    <p>Proven low-cost marketing tactics that early-stage startups can use to gain traction before they have budget for paid acquisition. Real case studies from successful founders.</p>
+                    <div class="advice-meta">
+                        <span><i class="far fa-user"></i> Emma Rodriguez, Growth Expert</span>
+                        <span><i class="far fa-clock"></i> 22 min read</span>
+                        <span><i class="far fa-thumbs-up"></i> 93% found helpful</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Other tabs content would go here -->
+        </div>
+    </section>
+
+    <!-- Experts Section -->
+    <section class="experts">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Expert Advisors</h2>
+                <p>Learn from founders, investors, and industry specialists</p>
+            </div>
+            <div class="expert-grid">
+                <div class="expert-card">
+                    <div class="expert-image">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Expert Advisor">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Lisa Wong</h3>
+                        <p>Former VP at Stripe</p>
+                        <span class="expert-specialty">Payments & Fintech</span>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-image">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Expert Advisor">
+                    </div>
+                    <div class="expert-info">
+                        <h3>James Wilson</h3>
+                        <p>3x Founder, 2 Exits</p>
+                        <span class="expert-specialty">SaaS & Enterprise</span>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-image">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Expert Advisor">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Priya Patel</h3>
+                        <p>Early-stage Investor</p>
+                        <span class="expert-specialty">Funding & Pitching</span>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-image">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Expert Advisor">
+                    </div>
+                    <div class="expert-info">
+                        <h3>Marcus Johnson</h3>
+                        <p>Legal Counsel</p>
+                        <span class="expert-specialty">Startup Law</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Get Weekly Startup Insights</h2>
+            <p>Join 15,000+ founders receiving curated advice, case studies, and resources every week.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>StartupAdvice</h3>
+                    <p>Empowering entrepreneurs with knowledge from those who've been there before.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Startup Checklists</a></li>
+                        <li><a href="#">Pitch Deck Templates</a></li>
+                        <li><a href="#">Legal Documents</a></li>
+                        <li><a href="#">Founder Guides</a></li>
+                        <li><a href="#">Glossary</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Experts</a></li>
+                        <li><a href="#">Become an Advisor</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 StartupAdvice Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.advice-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = button.getAttribute('data-tab') + '-tab';
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenu.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            // Responsive adjustment for nav links
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    navLinks.style.display = 'flex';
+                } else {
+                    navLinks.style.display = 'none';
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Newsletter form submission
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const emailInput = this.querySelector('input[type="email"]');
+                    if (emailInput.value) {
+                        alert('Thanks for subscribing! Startup advice is on its way to your inbox.');
+                        emailInput.value = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
